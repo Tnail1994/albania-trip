@@ -6,11 +6,12 @@
     color: #333;
     border-radius: 7%;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.7s;
   }
   
 .header-button:hover {
-    background-color: #f0f0f0;
+    color: darkslategray;
+    background-color: rgba(191, 201, 201, 0.075);
 }
   
 .button-content {
