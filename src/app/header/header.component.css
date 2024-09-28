@@ -1,0 +1,20 @@
+#container {
+    display: flex;
+    padding: 31px 371px;
+    margin-bottom: 20px;
+    background-color: rgb(168, 151, 142);
+
+    #links{
+        flex-grow: 1;
+        display: flex;
+        gap: 20px;
+        justify-content: right;
+
+        .link{
+            cursor: pointer;
+            &:hover{
+                color: darkslategray;
+            }
+        }
+    }
+}

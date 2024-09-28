@@ -1,0 +1,20 @@
+<div id="container">
+    <div id="logo" class="Logo" routerLink="home">Logo</div>
+
+    <div id="links">
+        <!-- <div class="link" routerLink="language">Language</div>
+        <div>|</div>
+        <div class="link" routerLink="favorites">Favorites</div>
+        <div>|</div>
+        <div class="link" routerLink="cart">Cart</div>
+        <div>|</div>
+        <div class="link" routerLink="profile">Profile</div> -->
+        <ng-container *ngFor="let button of headerButtons">
+            <app-header-button 
+              [icon]="button.icon"
+              [text]="button.text"
+              (buttonClick)="button.action()">
+            </app-header-button>
+        </ng-container>
+    </div>   
+</div>
