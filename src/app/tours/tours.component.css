@@ -1,0 +1,15 @@
+.picsum-img-wrapper img {
+    object-fit: cover;
+    height: 300px;
+    /* Adjust height as per your design */
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}

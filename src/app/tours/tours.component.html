@@ -1,26 +1,26 @@
 <h2 class="generalPagePadding">Unforgettable Tours</h2>
-
-<!-- <mat-card class="card"  class="generalPagePadding">
-     <mat-card-content>
-          <mat-card-title> Some Title</mat-card-title>
-          <mat-card-subtitle> Some SubTitle </mat-card-subtitle>
-     </mat-card-content>
-</mat-card> -->
-
-<ngb-carousel #carousel [interval]="3000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus"
-     (slide)="onSlide($event)">
-     @for (img of images; track img; let i = $index) {
-     <ng-template ngbSlide>
-          <div class="carousel-caption">
-               <h3>My slide {{ i + 1 }} title</h3>
+<div class="card-group generalPagePadding">
+     <!-- Loop through carousel items -->
+     <div class="card m-1" *ngFor="let carouselItem of carouselList">
+          <!-- Carousel section inside the card body -->
+          <div class="card-body p-0">
+               <ngb-carousel #carousel [interval]="carouselItem.interval" [pauseOnHover]="pauseOnHover"
+                    [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+                    <!-- Loop through images for each carousel -->
+                    <ng-template ngbSlide *ngFor="let img of carouselItem.images; let i = index">
+                         <div class="picsum-img-wrapper">
+                              <img [src]="img" alt="My image {{ i + 1 }} description" class="d-block w-100" />
+                         </div>
+                         <div class="carousel-caption d-none d-md-block">
+                              <h5>My slide {{ i + 1 }} title</h5>
+                              <p>Slide {{ i + 1 }} description goes here.</p>
+                         </div>
+                    </ng-template>
+               </ngb-carousel>
           </div>
-          <a href="https://www.google.fr/?q=Number+{{ i + 1 }}" target="_blank" rel="nofollow noopener noreferrer">
-               <div class="picsum-img-wrapper">
-                    <img [src]="img" alt="My image {{ i + 1 }} description" />
-               </div>
-          </a>
-     </ng-template>
-     }
-</ngb-carousel>
-
-<hr />
+          <!-- Card footer with additional info -->
+          <div class="card-footer">
+               <small class="text-muted">Carousel interval: {{ carouselItem.interval }} ms</small>
+          </div>
+     </div>
+</div>
