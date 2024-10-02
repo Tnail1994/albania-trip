@@ -1,26 +1,27 @@
 #container {
     display: flex;
-    padding: 11px 371px;
     background-color: rgb(168, 151, 142);
 
-    #logo{
+    #logo {
         align-content: center;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             color: darkslategray;
         }
     }
 
-    #links{
+    #links {
         flex-grow: 1;
         display: flex;
         gap: 21px;
         justify-content: right;
         align-content: center;
 
-        .link{
+        .link {
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 color: darkslategray;
             }
         }
