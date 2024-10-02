@@ -1,4 +1,6 @@
-app-header, #homeImg, div {
+app-header,
+#homeImg,
+div {
   margin: 0;
   padding: 0px;
   border: none;
@@ -33,11 +35,13 @@ div {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Dark grey overlay */
-  z-index: 1; /* Ensures the overlay sits on top of the image */
+  background: rgba(255, 255, 255, 0.1);
+  /* Dark grey overlay */
+  z-index: 1;
+  /* Ensures the overlay sits on top of the image */
 }
+
 #homeImg:hover {
-  filter: grayscale(0%) brightness(1); /* Restores full color and brightness on hover */
+  filter: grayscale(0%) brightness(1);
+  /* Restores full color and brightness on hover */
 }
-
-
