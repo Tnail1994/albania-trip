@@ -34,7 +34,32 @@ export class ToursComponent implements OnInit {
       images: [
         '../assets/img/albanien-urlaub.jpg',
         '../assets/img/albanien-urlaub2.jpg'], interval: 0
-    }
+    },
+    {
+      images: [
+        '../assets/img/albanien-urlaub.jpg',
+        '../assets/img/albanien-urlaub2.jpg'], interval: 0
+    },
+    {
+      images: [
+        '../assets/img/albanien-urlaub.jpg',
+        '../assets/img/albanien-urlaub2.jpg'], interval: 0
+    },
+    {
+      images: [
+        '../assets/img/albanien-urlaub.jpg',
+        '../assets/img/albanien-urlaub2.jpg'], interval: 0
+    },
+    {
+      images: [
+        '../assets/img/albanien-urlaub.jpg',
+        '../assets/img/albanien-urlaub2.jpg'], interval: 0
+    },
+    {
+      images: [
+        '../assets/img/albanien-urlaub.jpg',
+        '../assets/img/albanien-urlaub2.jpg'], interval: 0
+    },
   ];
 
   paused = false;
