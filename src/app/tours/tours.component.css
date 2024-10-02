@@ -19,15 +19,26 @@
 }
 
 .picsum-img-wrapper button {
-    z-index: 1;
     /* Ensure the button is above the image */
     background-color: rgba(63, 63, 68, 0.349);
 
 }
 
 .picsum-img-wrapper button i {
-    font-size: 2rem;
+    font-size: 1.71rem;
     /* Increase the size of the heart icon */
     color: grey;
     /* Heart icon color */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 5;
+    /* Set lower than the favorite button */
+}
+
+.favorite-btn {
+    z-index: 10;
+    /* Higher than carousel navigation arrows */
+    cursor: pointer;
 }
