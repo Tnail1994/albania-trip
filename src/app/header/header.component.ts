@@ -17,26 +17,27 @@ export class HeaderComponent {
     { icon: 'favorite', text: 'Favorites', action: () => this.onFavoriteClick() },
     { icon: 'shopping_cart', text: 'Cart', action: () => this.onCartClick() },
     { icon: 'person', text: 'Profile', action: () => this.onProfileClick() },
-    ];
+  ];
 
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
   onFavoriteClick() {
     console.log('Favorite clicked');
-    this.router.navigate(['favorites']);  }
+    this.router.navigate(['favorites']);
+  }
 
   onCartClick() {
     console.log('Cart clicked');
     this.router.navigate(['cart']);
   }
-  
+
   onProfileClick() {
     console.log('Profile clicked');
     this.router.navigate(['profile']);
   }
-  
+
   onHomeClick() {
     console.log('Home clicked');
     this.router.navigate(['home']);
-  }    
+  }
 }
