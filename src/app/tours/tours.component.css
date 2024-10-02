@@ -75,3 +75,12 @@
     filter: grayscale(0%) brightness(1);
     /* Restores full color and brightness on hover */
 }
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 381px;
+    /* 371px (right padding) + 10px (distance from right edge) */
+    transform: translateY(-50%);
+    z-index: 2;
+}
