@@ -2,13 +2,6 @@
     <div id="logo" class="link" routerLink="home" (click)="onHomeClick()">Logo</div>
 
     <div id="links">
-        <!-- <div class="link" routerLink="language">Language</div>
-        <div>|</div>
-        <div class="link" routerLink="favorites">Favorites</div>
-        <div>|</div>
-        <div class="link" routerLink="cart">Cart</div>
-        <div>|</div>
-        <div class="link" routerLink="profile">Profile</div> -->
         <ng-container *ngFor="let button of headerButtons">
             <app-header-button 
               [icon]="button.icon"
