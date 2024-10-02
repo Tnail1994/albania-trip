@@ -9,6 +9,11 @@
                               <ng-template ngbSlide *ngFor="let img of carouselItem.images; let i = index">
                                    <div class="picsum-img-wrapper">
                                         <img [src]="img" alt="My image {{ i + 1 }} description" class="d-block w-100" />
+                                        <button type="button" class="btn position-absolute top-0 end-0 m-2"
+                                             (click)="toggleFavorite(i)">
+                                             <i class="fas"
+                                                  [ngClass]="isFavorite(i) ? 'bi bi-heart-fill' : 'bi bi-heart'"></i>
+                                        </button>
                                    </div>
                                    <div class="carousel-caption d-none d-md-block">
                                         <h5>My slide {{ i + 1 }} title</h5>

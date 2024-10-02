@@ -1,13 +1,10 @@
-<div id="container">
+<div id="container" class="generalPagePadding">
     <div id="logo" class="link" routerLink="home" (click)="onHomeClick()">Logo</div>
 
     <div id="links">
         <ng-container *ngFor="let button of headerButtons">
-            <app-header-button 
-              [icon]="button.icon"
-              [text]="button.text"
-              (buttonClick)="button.action()">
+            <app-header-button [icon]="button.icon" [text]="button.text" (buttonClick)="button.action()">
             </app-header-button>
         </ng-container>
-    </div>   
+    </div>
 </div>

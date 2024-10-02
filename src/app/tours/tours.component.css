@@ -13,3 +13,21 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
+
+.picsum-img-wrapper {
+    position: relative;
+}
+
+.picsum-img-wrapper button {
+    z-index: 1;
+    /* Ensure the button is above the image */
+    background-color: rgba(63, 63, 68, 0.349);
+
+}
+
+.picsum-img-wrapper button i {
+    font-size: 2rem;
+    /* Increase the size of the heart icon */
+    color: grey;
+    /* Heart icon color */
+}
