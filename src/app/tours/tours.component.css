@@ -4,10 +4,6 @@
     /* Adjust height as per your design */
 }
 
-.card-footer {
-    background-color: #f8f9fa;
-    text-align: center;
-}
 
 .carousel-caption {
     background: rgba(0, 0, 0, 0.5);
@@ -43,13 +39,6 @@
     cursor: pointer;
 }
 
-
-.image-container {
-    position: relative;
-    width: 100%;
-    max-height: 350px;
-}
-
 #homeImg {
     display: block;
     width: 100%;
@@ -58,29 +47,53 @@
     object-fit: cover;
 }
 
-.image-container::before {
-    content: '';
+
+
+.image-container {
+    position: relative;
+}
+
+
+.search-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.1);
-    /* Dark grey overlay */
-    z-index: 1;
-    /* Ensures the overlay sits on top of the image */
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Optional: adds a slight overlay to make the search more visible */
 }
 
-#homeImg:hover {
-    filter: grayscale(0%) brightness(1);
-    /* Restores full color and brightness on hover */
+.header-overlay {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: start;
+    align-items: left;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-control {
+    width: 100%;
+    padding-right: 40px;
 }
 
 .search-icon {
     position: absolute;
+    right: 10px;
     top: 50%;
-    right: 381px;
-    /* 371px (right padding) + 10px (distance from right edge) */
     transform: translateY(-50%);
-    z-index: 2;
+    color: #495057;
+    /* Adjust color as needed */
 }

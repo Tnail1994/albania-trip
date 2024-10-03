@@ -1,14 +1,14 @@
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCard, MatCardContent, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tours',
   standalone: true,
-  imports: [CommonModule, NgbCarouselModule, FormsModule, MatSlideToggleModule, MatCard, MatCardContent, MatCardSubtitle, MatCardTitle],
+  imports: [CommonModule, NgbCarouselModule, FormsModule, MatSlideToggleModule, MatCard, MatCardContent, MatCardSubtitle, MatCardTitle, NgbNavModule],
   templateUrl: './tours.component.html',
   styleUrl: './tours.component.css'
 })
@@ -75,6 +75,7 @@ export class ToursComponent implements OnInit {
 
   favorites: Set<number> = new Set(); // Store favorite slide indices
   showNavigationArrows: boolean = true;
+  active = 'top';
 
   ngOnInit(): void {
     this.carouselList.forEach(carouselItem => {
@@ -113,13 +114,6 @@ export class ToursComponent implements OnInit {
   getRandomInterval(): number {
     return Math.floor(Math.random() * (this.maxRandomInterval - this.minRandomInterval + 1)) + this.minRandomInterval;
   }
-
-  // hideNavigationArrows() {
-  //   this.showNavigationArrows = false;
-  // }
-  // unhideNavigationArrows() {
-  //   this.showNavigationArrows = true;
-  // }
 
   toggleFavorite(index: number) {
     if (this.favorites.has(index)) {
