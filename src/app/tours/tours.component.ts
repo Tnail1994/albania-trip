@@ -75,7 +75,7 @@ export class ToursComponent implements OnInit {
 
   favorites: Set<number> = new Set(); // Store favorite slide indices
   showNavigationArrows: boolean = true;
-  active = 'top';
+  active = 'first';
 
   ngOnInit(): void {
     this.carouselList.forEach(carouselItem => {

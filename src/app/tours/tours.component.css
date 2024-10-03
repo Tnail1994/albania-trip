@@ -78,6 +78,16 @@
     align-items: left;
 }
 
+.nav-overlay {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: end;
+}
+
 .search-wrapper {
     position: relative;
     width: 100%;

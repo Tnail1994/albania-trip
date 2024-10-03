@@ -24,6 +24,24 @@
           </div>
      </div>
 
+     <div class="generalPagePadding nav-overlay">
+          <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills">
+               <ng-container ngbNavItem="first">
+                    <button ngbNavLink>Top</button>
+
+               </ng-container>
+               <ng-container ngbNavItem="second">
+                    <button ngbNavLink>Middle</button>
+
+               </ng-container>
+               <ng-container ngbNavItem="bottom">
+                    <button ngbNavLink>Bottom</button>
+
+               </ng-container>
+          </div>
+
+          <div [ngbNavOutlet]="nav" class="ms-4"></div>
+     </div>
 
 </div>
 
